@@ -6,7 +6,7 @@ Abaixo, o diagrama de sequência que detalha o fluxo de roteamento entre os cons
 
 
 
-!\[Fluxo de Sequência - LangGraph](https://github.com/marceloudo/4741_Langchain/blob/aula4/SD_Langgraph.png))
+!\[Fluxo de Sequência - LangGraph](https://github.com/marceloudo/4741_Langchain/blob/aula4/SD_Langgraph.png)
 
 
 
