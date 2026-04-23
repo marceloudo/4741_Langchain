@@ -1,4 +1,4 @@
-![Diagrama de Sequência](.aula4/SD_Langgraph.png)
+![Diagrama de Sequência](aula4/SD_Langgraph.png)
 
 
 # LangChain e Python: criando ferramentas com a LLM OpenAI
