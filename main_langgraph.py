@@ -52,9 +52,13 @@ class Estado(TypedDict):
     resposta:str
 
 async def no_roteador(estado: Estado, config=RunnableConfig):
-    return {"destino": await roteador.ainvoke({"query":estado["query"]}, config)} 
+    print("Roteador analisando a query...")
+    donde = {"destino": await roteador.ainvoke({"query":estado["query"]}, config)}
+    print(donde)
+    return donde
 
 async def no_praia(estado: Estado, config=RunnableConfig):
+    print("Processando consulta para a praia...")
     return {"resposta": await cadeia_praia.ainvoke({"query":estado["query"]}, config)} 
 
 async def no_montanha(estado: Estado, config=RunnableConfig):
@@ -77,7 +81,7 @@ app = grafo.compile()
 
 async def main():
     resposta = await app.ainvoke(
-        {"query": "Quero escalar montanhas radicais no sul do Brasil"}
+        {"query": "Há algo perto da Igreja do Rosário, dos Arautos do Evangelho no Monte Tabor para escalarmos?"}
     )
     print(resposta["resposta"])
 
