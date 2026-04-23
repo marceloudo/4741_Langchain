@@ -1,4 +1,4 @@
-<img width="989" alt="image" src="https://github.com/user-attachments/assets/c140d5f9-a165-44d0-80b9-592fdbf16e03" />
+![Diagrama de Sequência](.aula4/SD_Langgraph.png)
 
 
 # LangChain e Python: criando ferramentas com a LLM OpenAI
