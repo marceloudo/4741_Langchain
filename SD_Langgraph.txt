@@ -1,0 +1,25 @@
+participant Usuário
+participant Grafo
+participant Roteador_LLM
+participant Sra_Praia
+participant Sr_Montanha
+participant OpenAI
+
+Note over Usuário,OpenAI: START
+
+Usuário -> Grafo: "Há algo perto da Igreja do Rosário..."
+Grafo -> Roteador_LLM: Decide route
+Roteador_LLM -> OpenAI: Classify: praia or montanha?
+OpenAI -> Roteador_LLM: Classification result
+
+alt Praia
+    Roteador_LLM -> Sra_Praia: Process beach query
+    Sra_Praia -> Grafo: Beach response
+else Montanha
+    Roteador_LLM -> Sr_Montanha: Process mountain query
+    Sr_Montanha -> Grafo: Mountain response
+end
+
+Grafo -> Usuário: Final response
+
+Note over Usuário,OpenAI: END
