@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+<<<<<<< Diagrama de Sequência para as Chains LCEL
 ![Diagrama de Sequência](./SD_Langgraph.png)
 =======
 \## 📊 Arquitetura do Grafo (Aula 4)
@@ -16,3 +16,4 @@ Abaixo, o diagrama de sequência que detalha o fluxo de roteamento entre os cons
 
 > \*\*Nota:\*\* O fluxo utiliza lógica condicional para direcionar a query do usuário com base na análise do roteador.```
 
+![Diagrama de Sequência](./SD_rag_txt.png)
