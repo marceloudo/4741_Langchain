@@ -1,0 +1,29 @@
+title RAG System Sequence Diagram
+
+participant User
+participant Responder
+participant FAISS_VectorStore
+participant LLM_GPT4oMini
+
+User->Responder: responder("pergunta")
+activate Responder
+
+Responder->FAISS_VectorStore: as_retriever.invoke("pergunta")
+activate FAISS_VectorStore
+
+FAISS_VectorStore-->Responder: relevant chunks (trechos)
+deactivate FAISS_VectorStore
+
+note right of Responder: Prepares context
+and sends to Chain
+(Prompt | LLM | Parser)
+
+Responder->LLM_GPT4oMini: invoke Chain with context
+activate LLM_GPT4oMini
+
+LLM_GPT4oMini-->Responder: parsed response
+deactivate LLM_GPT4oMini
+
+deactivate Responder
+
+Responder-->User: final answer
