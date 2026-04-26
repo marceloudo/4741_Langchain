@@ -6,7 +6,8 @@ Abaixo, o diagrama de sequência que detalha o fluxo de roteamento entre os cons
 
 
 
-!\[Fluxo de Sequência - LangGraph](./SD\_Langgraph.png)
+![Diagrama de Sequência](./SD_Langgraph.png)
+
 
 
 
